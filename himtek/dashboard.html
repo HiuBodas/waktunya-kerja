@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Waktunya Kerja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo-section">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <h1 class="logo">Waktunya<span>Kerja</span> 🕒</h1>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Cari pekerjaan, perusahaan..." />
+      </div>
+
+      <div class="profile-section">
+        <img src="https://i.pravatar.cc/40" alt="User" class="profile-pic">
+        <span class="username">Halo, <b>Rina</b></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <h3>Menu</h3>
+      <a href="#">🏠 Dashboard</a>
+      <a href="#">💼 Lowongan</a>
+      <a href="#">🏢 Perusahaan</a>
+      <a href="#">⚙️ Pengaturan</a>
+    </nav>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <main class="main">
+      <!-- Lowongan Terbaru Bergiliran -->
+      <div class="card">
+        <h2>Lowongan Terbaru di Bandung</h2>
+
+        <div class="job-marquee-container" style="position: relative; height: 350px; overflow: hidden;">
+          <!-- Setiap lowongan dengan class "job-item" -->
+          
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/startup.jpg" alt="Startup Digital" class="company-logo"/>
+            <h3>Software Developer</h3>
+            <p><b>Perusahaan:</b> Startup Digital</p>
+            <p><b>Deskripsi:</b> Mengembangkan aplikasi web dan mobile, bekerja sama dengan tim UI/UX untuk meningkatkan performa produk.</p>
+            <p><b>Alamat:</b> Jl. Soekarno-Hatta No. 123, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/industri.jpeg" alt="PT Industri Makmur" class="company-logo"/>
+            <h3>Operator Produksi</h3>
+            <p><b>Perusahaan:</b> PT Industri Makmur</p>
+            <p><b>Deskripsi:</b> Bertanggung jawab atas jalannya produksi, memastikan kualitas dan kuantitas sesuai target.</p>
+            <p><b>Alamat:</b> Jl. Industri No. 45, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/hotel.jpeg" alt="Hotel Santika" class="company-logo"/>
+            <h3>Front Desk</h3>
+            <p><b>Perusahaan:</b> Hotel Santika</p>
+            <p><b>Deskripsi:</b> Menyambut tamu, melakukan reservasi, dan memberikan informasi layanan hotel.</p>
+            <p><b>Alamat:</b> Jl. Dago No. 77, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/hotel1.jpeg" alt="Hotel Novotel" class="company-logo"/>
+            <h3>Housekeeping</h3>
+            <p><b>Perusahaan:</b> Hotel Novotel</p>
+            <p><b>Deskripsi:</b> Menjaga kebersihan kamar dan area publik hotel agar tetap rapi dan nyaman untuk tamu.</p>
+            <p><b>Alamat:</b> Jl. Braga No. 88, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/fashion.jpeg" alt="Fashion House" class="company-logo"/>
+            <h3>Desainer Pakaian</h3>
+            <p><b>Perusahaan:</b> Fashion House</p>
+            <p><b>Deskripsi:</b> Mendesain koleksi pakaian baru, mengikuti tren fashion, dan berkolaborasi dengan tim produksi.</p>
+            <p><b>Alamat:</b> Jl. R.E. Martadinata No. 20, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+          <div class="company job-item" style="position: absolute; white-space: normal;">
+            <img src="gambar/fasion 2.jpeg" alt="Fashion Studio" class="company-logo"/>
+            <h3>Pattern Maker</h3>
+            <p><b>Perusahaan:</b> Fashion Studio</p>
+            <p><b>Deskripsi:</b> Membuat pola pakaian, menyiapkan bahan untuk produksi, dan bekerja sama dengan penjahit.</p>
+            <p><b>Alamat:</b> Jl. Asia Afrika No. 15, Bandung</p>
+            <button class="btn">Lamar</button>
+          </div>
+
+        </div>
+
+        <!-- Jenis Pekerjaan -->
+        <div class="job-types-card">
+          <h2>Jenis Pekerjaan</h2>
+          <div class="job-types">
+            <span class="job-type">IT & Software</span>
+            <span class="job-type">Produksi</span>
+            <span class="job-type">Hospitality</span>
+            <span class="job-type">Desain & Fashion</span>
+            <span class="job-type">Administrasi</span>
+            <span class="job-type">Marketing & Sales</span>
+            <span class="job-type">Keuangan & Akuntansi</span>
+            <span class="job-type">Kesehatan</span>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

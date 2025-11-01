@@ -1,0 +1,322 @@
+/* === STYLE UTAMA WEB "WAKTUNYA KERJA" === */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #F5F9E9;
+  margin: 0;
+  padding: 0;
+  color: #36453B;
+}
+
+/* ==== NAVBAR ==== */
+header {
+  background-color: #36453B;
+  color: #F5F9E9;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #F5F9E9;
+}
+
+.logo span {
+  color: #DCDDC7;
+}
+
+/* Tombol menu */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #F5F9E9;
+  font-size: 28px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Pencarian */
+.search-bar {
+  flex: 1;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  background-color: #DCDDC7;
+  color: #36453B;
+}
+
+.search-bar input::placeholder {
+  color: #515751;
+}
+
+/* Profil */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #DCDDC7;
+}
+
+.username {
+  font-size: 14px;
+  color: #F5F9E9;
+}
+
+/* ==== SIDEBAR ==== */
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #596869;
+  color: #F5F9E9;
+  padding: 20px;
+  transition: transform 0.3s ease, width 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #F5F9E9;
+  border-bottom: 1px solid #C2C1A5;
+  padding-bottom: 8px;
+}
+
+.sidebar a {
+  display: block;
+  color: #F5F9E9;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #515751;
+}
+
+/* ==== KONTEN ==== */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.card {
+  background-color: #DCDDC7;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #36453B;
+}
+
+/* Tombol */
+.btn {
+  background-color: #36453B;
+  color: #F5F9E9;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #596869;
+}
+
+/* Overlay untuk mobile */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54,69,59,0.5);
+  z-index: 900;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* ==== LOWONGAN TERBARU & LOGO PERUSAHAAN ==== */
+.job-marquee-container {
+  position: relative;
+  height: 350px; /* tinggi container marquee */
+  overflow: hidden;
+}
+
+.job-item {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: top 0.5s ease;
+}
+
+/* Card masing-masing perusahaan */
+.company {
+  background-color: #F5F5F0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.company h3 {
+  margin: 8px 0 5px;
+  color: #36453B;
+}
+
+.company p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #36453B;
+}
+
+/* Card hover effect */
+.company:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* ==== JENIS PEKERJAAN ==== */
+.job-types-card {
+  background-color: #E0E4D4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.job-types-card h2 {
+  margin-bottom: 12px;
+  color: #36453B;
+}
+
+.job-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.job-type {
+  background-color: #36453B;
+  color: #F5F9E9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: default;
+  transition: 0.2s;
+}
+
+.job-type:hover {
+  background-color: #596869;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .profile-section {
+    display: none;
+  }
+
+  .search-bar {
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .company img {
+    width: 120px;
+    height: 120px;
+  }
+}
