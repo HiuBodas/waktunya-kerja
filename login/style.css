@@ -1,0 +1,282 @@
+/* ==== LOGIN PERUSAHAAN ==== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F5F9E9;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #DCDDC7;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  color: #36453B;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #36453B;
+  font-weight: 500;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 5px;
+  border: 1px solid #E0E0E0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+  background-color: #F5F5F0;
+  color: #36453B;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.login-card input::placeholder {
+  color: #515751;
+}
+
+.login-card input:focus {
+  background-color: #E8F1E1;
+  border-color: #36453B;
+}
+
+/* Tombol login */
+.login-card .btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #36453B;
+  color: #F5F9E9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.login-card .btn:hover {
+  background-color: #596869;
+  transform: scale(1.05);
+}
+
+.login-card .btn:active {
+  background-color: #515751;
+}
+
+/* Link pendaftaran dan kembali */
+.login-card a {
+  color: #36453B;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+  color: #515751;
+}
+
+.login-card p {
+  font-size: 14px;
+  color: #515751;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* ==== DASHBOARD PERUSAHAAN ==== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F5F9E9;
+  margin: 0;
+}
+
+header {
+  background-color: #36453B;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar .logo-section h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header .navbar .logo-section h1 span {
+  color: #DCDDC7;
+}
+
+header .profile-section {
+  display: flex;
+  align-items: center;
+}
+
+header .profile-section .profile-pic {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+header .profile-section .username {
+  margin-right: 20px;
+}
+
+header .profile-section .logout-btn {
+  background-color: #DCDDC7;
+  color: #36453B;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .profile-section .logout-btn:hover {
+  background-color: #B4B6A5;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+nav.sidebar {
+  background-color: #DCDDC7;
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+nav.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #36453B;
+}
+
+nav.sidebar a {
+  color: #36453B;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+nav.sidebar a:hover {
+  color: #596869;
+}
+
+nav.sidebar a.active {
+  font-weight: bold;
+  color: #36453B;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.show {
+  display: block;
+}
+
+main.main {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
+
+main.main .card {
+  background-color: #DCDDC7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+main.main .card h2 {
+  font-size: 22px;
+  color: #36453B;
+  margin-bottom: 15px;
+}
+
+.job-item {
+  background-color: #F5F5F0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.job-item h3 {
+  color: #36453B;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.job-item p {
+  font-size: 14px;
+  color: #515751;
+}
+
+.job-item .action-buttons {
+  margin-top: 10px;
+}
+
+.job-item .action-buttons .btn {
+  background-color: #36453B;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.job-item .action-buttons .btn-danger {
+  background-color: #D9534F;
+}
+
+.job-item .action-buttons .btn:hover {
+  background-color: #596869;
+}
+
+.job-item .action-buttons .btn-danger:hover {
+  background-color: #C9302C;
+}
+
+.job-item .action-buttons .btn:active {
+  background-color: #515751;
+}

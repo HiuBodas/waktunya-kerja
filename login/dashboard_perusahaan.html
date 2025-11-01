@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Perusahaan | Waktunya Kerja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo-section">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <h1 class="logo">Waktunya<span>Kerja</span> 🕒</h1>
+      </div>
+
+      <div class="profile-section">
+        <img src="https://i.pravatar.cc/40?img=12" alt="Perusahaan" class="profile-pic">
+        <span class="username">Halo, <b id="companyName"></b></span>
+        <button class="btn logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <h3>Menu</h3>
+      <a href="#">🏠 Dashboard</a>
+      <a href="#">➕ Tambah Lowongan</a>
+      <a href="#">📄 Daftar Lamaran</a>
+      <a href="#">⚙️ Pengaturan</a>
+    </nav>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <main class="main">
+      <!-- Lowongan Perusahaan -->
+      <div class="card">
+        <h2>Lowongan Aktif</h2>
+
+        <div class="job-list">
+          <div class="job-item">
+            <h3>Software Engineer</h3>
+            <p><b>Deskripsi:</b> Mengembangkan aplikasi internal perusahaan dan melakukan maintenance sistem.</p>
+            <p><b>Lokasi:</b> Bandung</p>
+            <p><b>Status:</b> Aktif</p>
+            <div class="action-buttons">
+              <button class="btn">Edit</button>
+              <button class="btn btn-danger">Hapus</button>
+            </div>
+          </div>
+
+          <div class="job-item">
+            <h3>Marketing Staff</h3>
+            <p><b>Deskripsi:</b> Membuat strategi pemasaran dan promosi produk perusahaan.</p>
+            <p><b>Lokasi:</b> Bandung</p>
+            <p><b>Status:</b> Aktif</p>
+            <div class="action-buttons">
+              <button class="btn">Edit</button>
+              <button class="btn btn-danger">Hapus</button>
+            </div>
+          </div>
+
+          <div class="job-item">
+            <h3>HRD</h3>
+            <p><b>Deskripsi:</b> Mengelola administrasi karyawan, rekrutmen, dan pelatihan internal.</p>
+            <p><b>Lokasi:</b> Bandung</p>
+            <p><b>Status:</b> Aktif</p>
+            <div class="action-buttons">
+              <button class="btn">Edit</button>
+              <button class="btn btn-danger">Hapus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Fungsi untuk toggle menu sidebar
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+      sidebar.classList.toggle("hidden");
+      overlay.classList.toggle("show");
+    }
+
+    // Fungsi untuk menutup menu sidebar saat klik overlay
+    function closeMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+      sidebar.classList.add("hidden");
+      overlay.classList.remove("show");
+    }
+
+    // Fungsi untuk logout
+    function logout() {
+      // Menghapus sessionStorage yang menyimpan data login
+      sessionStorage.removeItem("perusahaanUser");
+      // Redirect ke halaman login
+      window.location.href = "login_perusahaan.html";
+    }
+
+    // Mengecek apakah pengguna sudah login
+    window.onload = function() {
+      const perusahaanUser = sessionStorage.getItem("perusahaanUser");
+
+      // Jika tidak ada session pengguna, arahkan ke halaman login
+      if (!perusahaanUser) {
+        window.location.href = "login_perusahaan.html";
+      } else {
+        // Menampilkan nama perusahaan di dashboard
+        const companyName = perusahaanUser.split('@')[0]; // Mengambil nama dari email (contoh: info@ptmakmur.com -> info)
+        document.getElementById("companyName").textContent = companyName;
+      }
+    }
+  </script>
+</body>
+</html>
